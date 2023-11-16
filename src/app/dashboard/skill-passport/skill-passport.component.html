@@ -1,0 +1,147 @@
+<div class="content-wrapper-sub-menu row">
+    
+
+    <div class="col-md-1">
+        <span *ngIf="displaySlide != 1" class="btn btn-sp bg-gradient-primary text-white me-2" (click)="Previous()">
+            <i class="mdi mdi-home"><img src="../../assets/images/previous1.png"/></i>
+          </span>
+    </div>
+
+    <div class="Content-data col-md-10">
+        <div class="stretch-card grid-margin">
+            <div *ngIf="displaySlide == 1" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport" style="text-align: center;">
+                <h1 class="text-Times">Applicant Skill Passport</h1>
+              <br>
+                <img style="height: 250px;width: 250px" src="../../assets/images/job1.png"/>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 2" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h3 class="card-title-header">What is Skill Passport?</h3>
+                <h4 class="card-text">Skill passport is a new concept from hirextra to design your own skill passport like a portfolio. Skill passport will design Applicant skills in passport model. </h4>
+              <br>
+                <h3 class="card-title-header">Why Skill Passport?</h3>
+                <h4 class="card-text">Skill passport will give a more information about Applicant responsibilities and abilities. Applicant can able to share his skill passport report via social networks like Facebook, Linkedin, Google plus or whatsapp.</h4>
+              <br>
+                <h3 class="card-title-header">How to Generate Skill Passport?</h3>
+                <h4 class="card-text">By uploading Applicant resume our business algorithm will extract information from resume and display the result in passbook page animation view.</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 3" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Summary <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text">{{skillData.executive_summary}} </h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 4" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Opearational Skills <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let opsSkill of skillData.skills_eng.competencies_analysis.abilities"># {{opsSkill.name}} - {{opsSkill.value}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 5" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Work Experience <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let work of skillData.work_experience"># {{work.company}} - {{work.designation}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 6" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Education <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text">{{skillData.qualification}} </h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 7" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Soft Skills <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let skill of skillData.skills_eng.competencies_analysis.soft_skills"># {{skill.name}} - {{skill.value}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 8" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Work Activities <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let opsSkill of skillData.skills_eng.competencies_analysis.detailed_work_activities"># {{opsSkill.title}} - {{opsSkill.score}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 9" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Knowledge <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let opsSkill of skillData.skills_eng.competencies_analysis.knowledges"># {{opsSkill.name}} - {{opsSkill.value}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 10" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Skills <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text" *ngFor="let opsSkill of skillData.skills_eng.competencies_analysis.skills"># {{opsSkill.name}} - {{opsSkill.value}}</h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 11" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Abilities <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text"></h4>
+              </div>
+            </div>
+
+
+            <div *ngIf="displaySlide == 12" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Personality - BIG 5 <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <!-- <ngx-charts-polar-chart
+                      [view]="view"
+                      [scheme]="colorScheme"
+                      [legend]="legend"
+                      [showXAxisLabel]="showXAxisLabel"
+                      [showYAxisLabel]="showYAxisLabel"
+                      [xAxis]="xAxis"
+                      [yAxis]="yAxis"
+                      [xAxisLabel]="xAxisLabel"
+                      [yAxisLabel]="yAxisLabel"
+                      [results]="multi">
+              </ngx-charts-polar-chart> -->
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 13" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Values <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text"> </h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 14" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport">
+                <h2 class="card-title">Needs <span style="font-size: 18px; color: green">of  {{name}}</span></h2><br>
+                <h4 class="card-text"></h4>
+              </div>
+            </div>
+
+            <div *ngIf="displaySlide == 15" class="card card-img-holder text-white">
+              <div class="card-body card-body-skill-passport" style="text-align: center;">
+                <h1 class="card-title">Keep sharing with your social network by clicking below icons..! <i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                </h1>
+                <img style="height: 250px;width: 250px" src="../../assets/images/QR.png"/>
+              </div>
+            </div>
+
+            
+          </div>
+    </div> 
+    
+
+    <div class="col-md-1">
+        <span *ngIf="displaySlide != 15" type="button" class="btn btn-sp bg-gradient-primary text-white me-2" (click)="Next()">
+            <i class="mdi mdi-home" ><img src="../../assets/images/next1.png"/></i>
+          </span>
+    </div>
+</div>

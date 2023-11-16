@@ -1,0 +1,10 @@
+.content-wrapper-sub-menu {
+    padding: 3rem 2.25rem;
+    /* background:red; */
+    background: radial-gradient(circle, #00001a 0%, rgba(148,187,233,1) 100%);
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+

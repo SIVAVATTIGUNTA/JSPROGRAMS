@@ -1,0 +1,29 @@
+<div>
+    <!-- <div class="content-container">
+      <span id="close-icon"><i (click)="closeDialog()" class="glyphicon glyphicon-remove"></i></span>
+      <span class="content-span full-width">{{data.email}}</span>
+    </div> -->
+  
+    <form class="row">
+        <div *ngIf="data.indexOf('country') > -1" class="form-group">
+        <label>Country</label>
+        <i class=""></i>  <input [(ngModel)]="countryValue" name="country" type="text" class="form-control form-control-lg mdi mdi-home" required id="countryValue" placeholder="Country">
+        </div>
+        
+        <div *ngIf="data.indexOf('industry') > -1" class="form-group">
+        <label>Industry</label>
+        <input [(ngModel)]="industryValue" name="industry" type="text" class="form-control form-control-lg" required id="industryValue" placeholder="Industry"> 
+        </div>
+
+        <div *ngIf="data.indexOf('experience') > -1" class="form-group">
+        <label>Experience</label>
+        <input [(ngModel)]="experienceValue" name="experience" class="form-control form-control-lg" required id="experienceValue" placeholder="Experience"> 
+        </div>
+                
+        
+        <div class="error" *ngIf="isErrorVisible">{{errorText}}</div>
+        <button type="button" class="btn btn-gradient-primary btn-lg btn-block" (click)="UpdateMissingData()">Update</button>
+      
+    </form>
+</div>
+  
